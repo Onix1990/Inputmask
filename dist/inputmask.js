@@ -1129,11 +1129,7 @@
                     inputValue = valueBeforeCaret + e.clipboardData.getData("text/plain") + valueAfterCaret;
                 }
                 var pasteValue = inputValue;
-                if ("function" == typeof opts.onBeforePaste) {
-                    if (pasteValue = opts.onBeforePaste.call(inputmask, inputValue, opts), !1 === pasteValue);
-                    pasteValue = pasteValue || inputValue;
-                }
-                return (0, _inputHandling.checkVal)(this, !0, !1, pasteValue.toString().split(""), e);
+                return (0, _inputHandling.checkVal)(this, 0, !1, pasteValue.toString().split(""), e);
             },
             inputFallBackEvent: function inputFallBackEvent(e) {
                 var inputmask = this.inputmask, opts = inputmask.opts, $ = inputmask.dependencyLib;
